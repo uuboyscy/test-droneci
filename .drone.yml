@@ -1,0 +1,12 @@
+kind: pipeline
+type: docker      # 在 Docker 內部執行管道命令
+name: clone 
+
+steps:
+  - name: echo                           # 事件二：可自行定義的名稱
+    image: alpine                  
+    commands:                            # 預執行的 shell 指令，這邊印出 78523 內容
+    - echo "78523"
+    when:                                # 當觸發條件為 master 分支時會執行的動作
+      branch:
+      - main
