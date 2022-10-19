@@ -4,15 +4,17 @@ name: clone
 
 steps:
   - name: echo 
-    image: uuboyscy/python-rbmq                  
+    image: node:alpine                
     commands:  
     - echo "7852f3"
     - pwd
     - hostname -I
     - ls -lhrt
-    when: 
-      branch:
-      - main
+  - name: test
+    image: node:alpine
+    commands:
+    - ls -lhrt
+    - hostname -I
 
 
 # kind: pipeline
