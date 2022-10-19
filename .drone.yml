@@ -30,3 +30,4 @@ steps:
   - hostname -I
   - ls -lhrt
   - pwd
+  - echo 123
